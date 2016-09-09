@@ -17,7 +17,7 @@
     <!--END MATERIAL DESIGN-->
 
 </head>
-<body>
+<body ng-app="app">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -54,6 +54,9 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/angular.js")
+    @Scripts.Render("~/Public/app.js");
+    @Scripts.Render("https://code.angularjs.org/1.4.9/angular-route.min.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>
