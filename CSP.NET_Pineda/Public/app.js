@@ -1,5 +1,6 @@
 ﻿var app = angular.module("app", [
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap'
 ]);
 
 app.config(function ($routeProvider, $locationProvider) {
@@ -13,13 +14,13 @@ app.config(function ($routeProvider, $locationProvider) {
 
         .when('/Productos', {
 
-            templateUrl: 'Public/Templates/Productos.html',
-            controller: 'MainController'
+            templateUrl: 'Public/Templates/Productos/Index.html',
+            controller: 'ProductosController'
         })
-        .when('/Compras', {
+        .when('/Productores', {
 
-            templateUrl: 'Public/Templates/Compras.html',
-            controller: 'MainController'
+            templateUrl: 'Public/Templates/Productores/Index.html',
+            controller: 'ProductoresController'
         })
         .otherwise({
 
@@ -29,19 +30,5 @@ app.config(function ($routeProvider, $locationProvider) {
 
 });
 
-app.controller("MainController", function ($scope, $http) {
-    $scope.Nombre = "Cafe";
-    $scope.Cantidad = "200";
-    $scope.Categoria = "1";
 
-    $scope.agregarProducto = function () {
-        $http.post('Productos/addProductos', { _nombreProducto: $scope.Nombre, _cantidadStock: $scope.Cantidad, _categoria: $scope.Categoria })
-            .success(function (data) {
-                console.log(data);
-            })
-            .error(function (error) {
-                console.log(error);
-            })
-    }
-});
 

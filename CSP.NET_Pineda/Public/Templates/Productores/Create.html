@@ -1,0 +1,57 @@
+﻿<div class="modal-header">
+    <h4 class="modal-title">Nuevo Productor</h4>
+</div>
+<div class="modal-body">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Nombre</label>
+                <input type="text" class="form-control" ng-model="Nombre" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Apellido</label>
+                <input type="text" class="form-control" ng-model="Apellido" />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Identidad</label>
+                <input type="text" class="form-control" ng-model="Identidad" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Telefono</label>
+                <input type="text" class="form-control" ng-model="Telefono" />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">RTN</label>
+                <input type="text" class="form-control"  ng-model="RTN"/>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">IHCAFE</label>
+                <input type="text" class="form-control" ng-model="IHCAFE"/>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-11">
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textarea">Domicilio</label>
+            <textarea class="form-control" ng-model="Domicilio"></textarea>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$dismiss()">Cerrar</button>
+    <button type="button" class="btn btn-primary" ng-click="agregarProductor()">Guardar</button>
+</div>

@@ -1,0 +1,30 @@
+﻿<div class="modal-header" ng-init="getProductores()">
+    <h4 class="modal-title">Listado Actual Productores</h4>
+</div>
+<div class="modal-body">
+    <div style="overflow-y:auto;">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Nombres</th>
+                    <th>Identidad</th>
+                    <th>RTN</th>
+                    <th>IHCAFE</th>
+                    <th>Accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="Productor in ListaProductores">
+                    <th>{{Productor.Nombre +" "+Productor.Apellido}}</th>
+                    <th>{{Productor.Identidad}}</th>
+                    <th>{{Productor.RTN}}</th>
+                    <th>{{Productor.IHCAFE}}</th>
+                    <th><button type="button" class="btn btn-raised btn-warning btn-xs"><span class="glyphicon glyphicon-remove"></span></button></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$dismiss()">Cerrar</button>
+</div>

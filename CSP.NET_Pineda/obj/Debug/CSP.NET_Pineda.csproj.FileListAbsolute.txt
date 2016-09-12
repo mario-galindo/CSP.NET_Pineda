@@ -161,3 +161,4 @@ C:\Users\Marcos Pineda\Desktop\CSP.NET_Pineda\CSP.NET_Pineda\bin\Microsoft.Owin.
 C:\Users\Marcos Pineda\Desktop\CSP.NET_Pineda\CSP.NET_Pineda\obj\Debug\CSP.NET_Pineda.csprojResolveAssemblyReference.cache
 C:\Users\Marcos Pineda\Desktop\CSP.NET_Pineda\CSP.NET_Pineda\obj\Debug\CSP.NET_Pineda.dll
 C:\Users\Marcos Pineda\Desktop\CSP.NET_Pineda\CSP.NET_Pineda\obj\Debug\CSP.NET_Pineda.pdb
+C:\Users\GALINDO'PC\Documents\Visual Studio 2015\Projects\CSP.NET_Pineda\CSP.NET_Pineda\obj\Debug\CSP.NET_Pineda.csprojResolveAssemblyReference.cache

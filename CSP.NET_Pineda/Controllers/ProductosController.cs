@@ -15,6 +15,7 @@ namespace CSP.NET_Pineda.Controllers
             return View();
         }
 
+        /*POST de Productos*/
         public string addProductos(string _nombreProducto,int _cantidadStock,int _categoria) {
             try
             {
@@ -37,6 +38,19 @@ namespace CSP.NET_Pineda.Controllers
                 return e.ToString();
             }
 
+        }
+
+        /*GET de Productos*/
+        public JsonResult GetProducts() {
+            var listaProductos = from Producto in db.Productos
+                                 select new
+                                 {
+                                     Id = Producto.Id,
+                                     Nombre = Producto.NombreProducto,
+                                     Cantidad = Producto.CantidadStock,
+                                     Categoria = Producto.CategoriaProducto
+                                 };
+            return Json(listaProductos);
         }
     }
 }

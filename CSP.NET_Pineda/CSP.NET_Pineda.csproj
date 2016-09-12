@@ -215,6 +215,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductoresController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="C__MigrationHistory.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
@@ -252,7 +253,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="favicon.ico" />
+    <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -267,10 +268,23 @@
       <LastGenOutput>ModelData.cs</LastGenOutput>
     </Content>
     <Content Include="Public\app.js" />
-    <Content Include="Public\Templates\Productos.html" />
+    <Content Include="Public\Controllers\ProductoresController.js" />
+    <Content Include="Public\Controllers\ProductosController.js" />
+    <Content Include="Public\Servicios\ProductoresService.js" />
+    <Content Include="Public\Servicios\ProductosService.js" />
+    <Content Include="Public\Templates\Productores\Create.html" />
+    <Content Include="Public\Templates\Productores\Index.html" />
+    <Content Include="Public\Templates\Productores\Lista.html" />
+    <Content Include="Public\Templates\Productos\Create.html" />
+    <Content Include="Public\Templates\Productos\Index.html" />
+    <Content Include="Public\Templates\Productos\Lista.html" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -287,6 +301,7 @@
       <DependentUpon>ModelData.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Iniciar.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -333,6 +348,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Productos\Index.cshtml" />
+    <Content Include="Views\Productores\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
