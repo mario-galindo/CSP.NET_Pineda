@@ -38,7 +38,7 @@
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Productos", "Index", "Productos")</li>
                         <li>@Html.ActionLink("Productores", "Index", "Productores")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Compras", "Index", "Compras")</li>
                     </ul>
                 }
                 @Html.Partial("_LoginPartial")
@@ -69,11 +69,27 @@
     <!--CONTROLLERS-->
     @Scripts.Render("~/Public/Controllers/ProductosController.js")
     @Scripts.Render("~/Public/Controllers/ProductoresController.js")
+    @Scripts.Render("~/Public/Controllers/ComprasController.js")
+
+
+
 
     <!--SERVICIO-->
     @Scripts.Render("~/Public/Servicios/ProductosService.js")
     @Scripts.Render("~/Public/Servicios/ProductoresService.js")
+    @Scripts.Render("~/Public/Servicios/ComprasService.js")
 
-    
+
+
+    <footer class="panel-footer">
+        <!--START theFinancials.com Content-->
+        <!--copyright theFinancials.com - All Rights Reserved-->
+        <!--Get Help by Calling 1.843.886.3635-->
+        <!--specify 'bgcolor', 'fontcolor' and 'bordercolor' using 3- or 6-character color codes - DO NOT include '#' in the color codes-->
+        <!--use 'numtileswide=1' to display the widget vertically, 'numtileswide=0' to display it horizontally, or use another value for other layouts-->
+        <!--set 'scrollSpeedFromZeroToTen' to 0 to disable scrolling, or use value from 1 (slow) to 10 (fast) to control scroll speed-->
+        <script LANGUAGE='JavaScript' type='text/javascript' SRC='http://www.thefinancials.com/ShowPanel.aspx?pid=free&id=71&bgcolor=003366&fontcolor=ffffff&fontsize=13&bordercolor=c0c0c0&numtileswide=0&mode=js&scrollSpeedFromZeroToTen=5'></script>
+        <!--END theFinancials.com Content-->
+    </footer>
 </body>
 </html>

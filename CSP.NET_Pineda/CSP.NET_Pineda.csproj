@@ -213,6 +213,7 @@
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ComprasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductoresController.cs" />
@@ -268,10 +269,14 @@
       <LastGenOutput>ModelData.cs</LastGenOutput>
     </Content>
     <Content Include="Public\app.js" />
+    <Content Include="Public\Controllers\ComprasController.js" />
     <Content Include="Public\Controllers\ProductoresController.js" />
     <Content Include="Public\Controllers\ProductosController.js" />
+    <Content Include="Public\Servicios\ComprasService.js" />
     <Content Include="Public\Servicios\ProductoresService.js" />
     <Content Include="Public\Servicios\ProductosService.js" />
+    <Content Include="Public\Templates\Compras\Create.html" />
+    <Content Include="Public\Templates\Compras\Index.html" />
     <Content Include="Public\Templates\Productores\Create.html" />
     <Content Include="Public\Templates\Productores\Index.html" />
     <Content Include="Public\Templates\Productores\Lista.html" />
@@ -349,6 +354,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Productos\Index.cshtml" />
     <Content Include="Views\Productores\Index.cshtml" />
+    <Content Include="Views\Compras\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

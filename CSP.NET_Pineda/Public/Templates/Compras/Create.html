@@ -1,0 +1,61 @@
+﻿<div class="modal-header">
+    <h4 class="modal-title">Nueva Compra</h4>
+</div>
+<div class="modal-body">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Producto</label>
+                <select class="form-control">
+                    <option value="1">Cafe Seco</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Productor</label>
+                <select class="form-control">
+                    <option value="1">Marcos Pineda</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Peso</label>
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Tara</label>
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">RTN</label>
+                <input type="text" class="form-control" ng-model="RTN" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">IHCAFE</label>
+                <input type="text" class="form-control" ng-model="IHCAFE" />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-11">
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textarea">Domicilio</label>
+            <textarea class="form-control" ng-model="Domicilio"></textarea>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$dismiss()">Cerrar</button>
+    <button type="button" class="btn btn-primary" ng-click="agregarProductor()">Guardar</button>
+</div>
