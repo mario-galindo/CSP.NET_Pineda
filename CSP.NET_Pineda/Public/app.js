@@ -22,6 +22,11 @@ app.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'Public/Templates/Productores/Index.html',
             controller: 'ProductoresController'
         })
+        .when('/Compras', {
+
+            templateUrl: 'Public/Templates/Compras/Index.html',
+            controller: 'ComprasController'
+        })
         .otherwise({
 
             redirectTo: '/'

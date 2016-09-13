@@ -1,0 +1,79 @@
+﻿<div class="modal-header">
+    <h4 class="modal-title">Nueva Compra</h4>
+</div>
+<div class="modal-body">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Producto</label>
+                <select class="form-control">
+                    <option value="1">Cafe Seco</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Productor</label>
+                <select class="form-control">
+                    <option value="1">Marcos Pineda</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Peso</label>
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Tara</label>
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Factor de cambio</label>
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Precio del Cafe</label>
+                <input type="text" class="form-control"/>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-11">
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textarea">Sub total</label>
+            <textarea class="form-control" ng-model="Domicilio"></textarea>
+        </div>
+    </div>
+    <div class="col-md-11">
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textarea">Descuento</label>
+            <input type="text" class="form-control" />
+        </div>
+    </div>
+    <div class="col-md-11">
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textarea">Total</label>
+            <input type="text" class="form-control" />
+        </div>
+    </div>
+    <div class="col-md-11">
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textarea">Fecha de compra</label>
+            <input type="datetime" class="form-control" />
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$dismiss()">Cerrar</button>
+    <button type="button" class="btn btn-primary" ng-click="agregarProductor()">Guardar</button>
+</div>
