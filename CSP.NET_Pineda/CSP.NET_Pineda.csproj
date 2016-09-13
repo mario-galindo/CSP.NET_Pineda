@@ -277,6 +277,7 @@
     <Content Include="Public\Servicios\ProductosService.js" />
     <Content Include="Public\Templates\Compras\Create.html" />
     <Content Include="Public\Templates\Compras\Index.html" />
+    <Content Include="Public\Templates\Compras\Lista.html" />
     <Content Include="Public\Templates\Productores\Create.html" />
     <Content Include="Public\Templates\Productores\Index.html" />
     <Content Include="Public\Templates\Productores\Lista.html" />
