@@ -1,29 +1,21 @@
-﻿<div class="modal-header" ng-init="getProductores()">
+﻿<div class="modal-header" ng-init="getCompras()" style="max-height:40px;">
     <h4 class="modal-title">Listado Actual Compras</h4>
 </div>
-<div class="modal-body">
+<div class="modal-body" style="overflow-y:scroll;">
     <div style="overflow-y:auto;">
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th>Producto</th>
                     <th>Productor</th>
-                    <th>Peso</th>
-                    <th>Tara</th>
-                    <th>Factor cambio dolar</th>
-                    <th>Precio del cafe</th>
-                    <th>Sub total</th>
-                    <th>Descuento</th>
-                    <th>Total</th>
-                    <th>Fecha de compra</th>
+                    <th>Producto</th>
+                    <th>Monto</th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="Productor in ListaProductores">
-                    <th>{{Productor.Nombre +" "+Productor.Apellido}}</th>
-                    <th>{{Productor.Identidad}}</th>
-                    <th>{{Productor.RTN}}</th>
-                    <th>{{Productor.IHCAFE}}</th>
+                <tr ng-repeat="Compra in ListadoCompras">
+                    <th>{{Compra.Nombre}}</th>
+                    <th>{{Compra.Producto}}</th>
+                    <th>{{Compra.Monto}}</th>
                     <th><button type="button" class="btn btn-raised btn-warning btn-xs"><span class="glyphicon glyphicon-remove"></span></button></th>
                 </tr>
             </tbody>

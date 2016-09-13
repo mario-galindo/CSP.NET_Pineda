@@ -86,7 +86,7 @@ app.controller('ModalInstanceNuevoProductorController', function ($scope, $uibMo
     $scope.getProductores = function () {
         $http.post('Productores/GetProductores')
             .success(function (data) {
-                //console.log(data);
+                console.log(data);
                 ProductoresServicios.ListaProductores = data;
                 $scope.ListaProductores = ProductoresServicios.ListaProductores;
                

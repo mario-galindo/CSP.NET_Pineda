@@ -66,8 +66,8 @@ app.controller('ModalInstanceNuevoProductoController', function ($scope, $uibMod
         $http.post('Productos/GetProducts')
             .success(function (data) {
                 console.log(data);
-                ProductosServicios.listadoProductos = data;
-                $scope.ListaProductos = ProductosServicios.listadoProductos;
+                ProductosServicios.ListaProductos = data;
+                $scope.ListaProductos = ProductosServicios.ListaProductos;
 
             })
             .error(function (error) {

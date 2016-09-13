@@ -19,8 +19,8 @@
 
         var modalInstance = $uibModal.open({
             animation: true,
-            templateUrl: 'Public/Templates/Productores/Lista.html',
-            controller: 'ModalInstanceNuevoProductorController',
+            templateUrl: 'Public/Templates/Compras/Lista.html',
+            controller: 'ModalInstanceNuevaCompraController',
             size: 'lg',
             resolve: {
                 items: function () {
@@ -36,24 +36,75 @@
 });
 
 //Controller del Modal que se Abrio
-app.controller('ModalInstanceNuevaCompraController', function ($scope, $uibModal, items, $rootScope, $filter, $http, $uibModalInstance, ProductoresServicios) {
+app.controller('ModalInstanceNuevaCompraController', function ($scope, $uibModal, items, $rootScope, $filter, $http, $uibModalInstance, ProductoresServicios, ProductosServicios, ComprasServicios) {
 
     //$scope.listadoProductos = items;
-    $scope.ListaProductores = [];
+    $scope.ListaCompras = [];
+    $scope.ListaProductores = ProductoresServicios.ListaProductores;
+    $scope.ListaProductos = ProductosServicios.ListaProductos;
 
-    //Obtener lista de Productos
-    $scope.getProductores = function () {
-        $http.post('Productores/GetProductores')
+    //Varibles de la Vista
+    $scope.IdProductor;
+    $scope.IdProducto;
+    $scope.Peso;
+    $scope.Tara;
+    $scope.SubTotal;
+    $scope.Descuento;
+    $scope.Total;
+    $scope.FactorCambioDolar = 21;
+    $scope.PrecioCafe;
+    $scope.FechaCompra;
+
+    $scope.Calcular = function () {
+
+        $scope.SubTotal = $scope.Peso - $scope.Tara;
+        $scope.SubTotal = $scope.SubTotal * $scope.Descuento;
+        $scope.SubTotal = $scope.SubTotal.toFixed(2);
+
+        $scope.Total = $scope.SubTotal * $scope.PrecioCafe;
+        $scope.Total = $scope.Total.toFixed(2);
+        
+    }
+
+    $scope.Guardar = function () {
+        $http.post('Compras/addCompra',
+            {
+                _IdProductor: $scope.IdProductor,
+                _IdProducto: $scope.IdProducto,
+                _Peso: $scope.Peso,
+                _Tara: $scope.Tara,
+                _SubTotal: $scope.SubTotal,
+                _Desc: $scope.Descuento,
+                _Total: $scope.Total,
+                _FCambio: $scope.FactorCambioDolar,
+                _PrecioCafe: $scope.PrecioCafe,
+                _FechaCompra: $scope.FechaCompra
+            })
+           .success(function (data) {
+               console.log(data);
+               if (data == 'true') {
+                   $uibModalInstance.dismiss('cancel');
+               }
+           })
+           .error(function (error) {
+               console.log(error);
+           })
+    }
+
+    //Obtener lista de Compras Con Proveedor
+    $scope.getCompras = function () {
+        $http.post('Compras/GetCompras')
             .success(function (data) {
-                //console.log(data);
-                ProductoresServicios.ListaProductores = data;
-                $scope.ListaProductores = ProductoresServicios.ListaProductores;
+                console.log(data);
+                ComprasServicios.ListaCompras = data;
+                $scope.ListadoCompras = ComprasServicios.ListaCompras;
 
             })
             .error(function (error) {
                 console.log(error);
             })
     }
+    
 
 
 })

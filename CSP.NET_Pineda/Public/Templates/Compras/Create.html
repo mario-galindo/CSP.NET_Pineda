@@ -6,16 +6,16 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textinput">Producto</label>
-                <select class="form-control">
-                    <option value="1">Cafe Seco</option>
+                <select class="form-control" ng-model="IdProducto">
+                    <option ng-repeat="Producto in ListaProductos" value="{{Producto.Id}}">{{Producto.Nombre}}</option>
                 </select>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textinput">Productor</label>
-                <select class="form-control">
-                    <option value="1">Marcos Pineda</option>
+                <select class="form-control" ng-model="IdProductor">
+                    <option ng-repeat="Productor in ListaProductores" value="{{Productor.Id}}">{{Productor.Nombre +" "+ Productor.Apellido}}</option>
                 </select>
             </div>
         </div>
@@ -24,56 +24,58 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textinput">Peso</label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" ng-model="Peso" />
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textinput">Tara</label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" ng-model="Tara" />
             </div>
         </div>
     </div>
     <div class="col-md-12">
         <div class="col-md-6">
             <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput">Factor de cambio</label>
-                <input type="text" class="form-control" />
+                <label class="col-md-4 control-label" for="textinput">Fa/Cambio</label>
+                <input type="text" class="form-control" ng-model="FactorCambioDolar"/>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput">Precio del Cafe</label>
-                <input type="text" class="form-control"/>
+                <label class="col-md-4 control-label" for="textinput">Precio</label>
+                <input type="text" class="form-control" ng-model="PrecioCafe"/>
             </div>
         </div>
     </div>
+
     <div class="col-md-11">
         <div class="form-group">
             <label class="col-md-4 control-label" for="textarea">Sub total</label>
-            <textarea class="form-control" ng-model="Domicilio"></textarea>
+            <input type="text" class="form-control" ng-model="SubTotal" readonly/>
         </div>
     </div>
     <div class="col-md-11">
         <div class="form-group">
             <label class="col-md-4 control-label" for="textarea">Descuento</label>
-            <input type="text" class="form-control" />
+            <input type="text" class="form-control"  ng-model="Descuento"/>
         </div>
     </div>
     <div class="col-md-11">
         <div class="form-group">
             <label class="col-md-4 control-label" for="textarea">Total</label>
-            <input type="text" class="form-control" />
+            <input type="text" class="form-control"  ng-model="Total" readonly/>
         </div>
     </div>
     <div class="col-md-11">
         <div class="form-group">
             <label class="col-md-4 control-label" for="textarea">Fecha de compra</label>
-            <input type="datetime" class="form-control" />
+            <input type="datetime-local" class="form-control" ng-model="FechaCompra">
         </div>
     </div>
 </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$dismiss()">Cerrar</button>
-    <button type="button" class="btn btn-primary" ng-click="agregarProductor()">Guardar</button>
+    <button type="button" class="btn btn-primary" ng-click="Calcular()">Calcular</button>
+    <button type="button" class="btn btn-primary" ng-click="Guardar()">Guardar</button>
 </div>

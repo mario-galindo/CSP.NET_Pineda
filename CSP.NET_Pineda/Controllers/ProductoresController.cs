@@ -51,6 +51,7 @@ namespace CSP.NET_Pineda.Controllers
             var listaProductores = from Productor in db.Productores
                                    select new
                                    {
+                                       Id = Productor.IdProductor,
                                        Nombre = Productor.NombreProveedor,
                                        Apellido = Productor.ApellidoProveedor,
                                        Identidad = Productor.Identidad,
