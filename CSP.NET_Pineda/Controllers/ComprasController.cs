@@ -104,11 +104,11 @@ namespace CSP.NET_Pineda.Controllers
 
             smtp.Credentials = new NetworkCredential("SMTP_Injection", "92685fa011e082ed66820e8c0c3e2d092bc35948");
             MailAddress from = new MailAddress("testing@sparkpostbox.com");
-            MailAddress to = new MailAddress("mgalindo9410@gmail.com");
+            MailAddress to = new MailAddress("nahun.echeverria@gmail.com","Bodega Pineda");
             MailMessage mail = new MailMessage(from, to);
             mail.Subject = "Confirmacion de compra";
             mail.Body = "Se compro cafe a: "+P+" Por monto de: "+V.ToString()+"";
-            //smtp.Send(mail);
+            smtp.Send(mail);
 
         }
 

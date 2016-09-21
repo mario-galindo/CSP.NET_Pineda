@@ -57,11 +57,11 @@ app.controller('ModalInstanceNuevaCompraController', function ($scope, $uibModal
 
     $scope.Calcular = function () {
 
-        $scope.SubTotal = $scope.Peso - $scope.Tara;
-        $scope.SubTotal = $scope.SubTotal * $scope.Descuento;
+        $scope.SubTotal = ($scope.Peso - $scope.Tara)* $scope.PrecioCafe;
+        //$scope.SubTotal = $scope.SubTotal * $scope.Descuento;
         $scope.SubTotal = $scope.SubTotal.toFixed(2);
 
-        $scope.Total = $scope.SubTotal * $scope.PrecioCafe;
+        $scope.Total = $scope.SubTotal - ($scope.SubTotal * $scope.Descuento);
         $scope.Total = $scope.Total.toFixed(2);
         
     }

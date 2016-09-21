@@ -15,13 +15,13 @@
                 <tr ng-repeat="Compra in ListadoCompras">
                     <th>{{Compra.Nombre}}</th>
                     <th>{{Compra.Producto}}</th>
-                    <th>{{Compra.Monto}}</th>
-                    <th><button type="button" class="btn btn-raised btn-warning btn-xs"><span class="glyphicon glyphicon-remove"></span></button></th>
+                    <th>L. {{Compra.Monto}}</th>
+                    <!--<th><button type="button" class="btn btn-raised btn-warning btn-xs"><span class="glyphicon glyphicon-remove"></span></button></th>-->
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="$dismiss()">Cerrar</button>
+    <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="$dismiss()">Cerrar</button>
 </div>
